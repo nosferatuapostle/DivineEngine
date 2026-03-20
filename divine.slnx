@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="divine/divine.vcxproj" Id="e46bfc23-06c0-4815-9137-122cb9a262b9" />
+  <Project Path="sandbox/sandbox.vcxproj" Id="41a4b176-ec6c-4224-a1bd-cf2daa1e1788" />
+</Solution>

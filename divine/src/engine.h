@@ -2,7 +2,9 @@
 
 // For use by divine applications
 
-#include <cstdio>
-#include "engine/application.h";
+#include "engine/variables.h"
 
-#include "engine/entrypoint.h";
+#include "engine/application.h"
+#include "engine/log.h"
+
+#include "engine/entrypoint.h"

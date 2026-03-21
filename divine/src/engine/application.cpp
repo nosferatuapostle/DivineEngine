@@ -12,7 +12,7 @@ namespace engine
 
 	}
 
-	void application::run()
+	void application::start()
 	{
 		while (true);
 	}

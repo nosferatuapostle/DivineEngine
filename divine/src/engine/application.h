@@ -4,14 +4,14 @@
 
 namespace engine
 {
-	class DIVINE_API application
+	class API application
 	{
 	public:
 		application();
 		virtual ~application();
-		void run();
+		void start();
 	};
 
 	application* create_application();
-};
+}
 

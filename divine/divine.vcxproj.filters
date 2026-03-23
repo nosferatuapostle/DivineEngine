@@ -4,6 +4,9 @@
     <Filter Include="engine">
       <UniqueIdentifier>{FBDB78FB-E77D-A3D1-D038-B725BC792A22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="engine\events">
+      <UniqueIdentifier>{9FF33A70-0BB4-B6A6-D4EE-FF23406EFB82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine.h" />
@@ -16,10 +19,19 @@
     <ClInclude Include="src\engine\entrypoint.h">
       <Filter>engine</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\log.h">
-      <Filter>engine</Filter>
+    <ClInclude Include="src\engine\events\application_event.h">
+      <Filter>engine\events</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\variables.h">
+    <ClInclude Include="src\engine\events\event.h">
+      <Filter>engine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\events\key_event.h">
+      <Filter>engine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\events\mouse_event.h">
+      <Filter>engine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\log.h">
       <Filter>engine</Filter>
     </ClInclude>
   </ItemGroup>

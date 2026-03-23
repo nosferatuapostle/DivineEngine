@@ -4,7 +4,8 @@
 
 #include "core.h"
 #include "spdlog/spdlog.h"
-#include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/fmt/ostr.h"
+
 
 namespace engine
 {
@@ -20,14 +21,14 @@ namespace engine
 	};
 }
 
-#define CORE_TRACE(...)    ::engine::log::get_core_logger()->trace(__VA_ARGS__)
-#define CORE_INFO(...)     ::engine::log::get_core_logger()->info(__VA_ARGS__)
-#define CORE_WARN(...)     ::engine::log::get_core_logger()->warn(__VA_ARGS__)
-#define CORE_ERROR(...)    ::engine::log::get_core_logger()->error(__VA_ARGS__)
-#define CORE_CRITICAL(...) ::engine::log::get_core_logger()->critical(__VA_ARGS__)
+#define core_trace(...)    ::engine::log::get_core_logger()->trace(__VA_ARGS__)
+#define core_info(...)     ::engine::log::get_core_logger()->info(__VA_ARGS__)
+#define core_warn(...)     ::engine::log::get_core_logger()->warn(__VA_ARGS__)
+#define core_error(...)    ::engine::log::get_core_logger()->error(__VA_ARGS__)
+#define core_critical(...) ::engine::log::get_core_logger()->critical(__VA_ARGS__)
 
-#define APP_TRACE(...)     ::engine::log::get_client_logger()->trace(__VA_ARGS__)
-#define APP_INFO(...)      ::engine::log::get_client_logger()->info(__VA_ARGS__)
-#define APP_WARN(...)      ::engine::log::get_client_logger()->warn(__VA_ARGS__)
-#define APP_ERROR(...)     ::engine::log::get_client_logger()->error(__VA_ARGS__)
-#define APP_CRITICAL(...)  ::engine::log::get_client_logger()->critical(__VA_ARGS__)
+#define app_trace(...)     ::engine::log::get_client_logger()->trace(__VA_ARGS__)
+#define app_info(...)      ::engine::log::get_client_logger()->info(__VA_ARGS__)
+#define app_warn(...)      ::engine::log::get_client_logger()->warn(__VA_ARGS__)
+#define app_error(...)     ::engine::log::get_client_logger()->error(__VA_ARGS__)
+#define app_critical(...)  ::engine::log::get_client_logger()->critical(__VA_ARGS__)

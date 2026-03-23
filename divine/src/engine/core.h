@@ -7,5 +7,8 @@
 		#define API _declspec(dllimport)
 	#endif
 #else
-	#error Divine Engine only support Windows platform!
+ #error Divine Engine only support Windows platform!
 #endif
+
+#define var auto
+#define bit(x) (1 << x)

@@ -1,4 +1,6 @@
 #include "application.h"
+#include "events/application_event.h"
+#include "log.h"
 
 namespace engine
 {
@@ -14,6 +16,12 @@ namespace engine
 
 	void application::start()
 	{
-		while (true);
+		window_resize_event e(1280, 720);
+		app_trace(e.to_string());
+
+		while (true)
+		{
+			//app_update_event();
+		};
 	}
 }

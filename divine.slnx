@@ -7,6 +7,8 @@
   </Configurations>
   <Project Path="divine\divine.vcxproj" Id="8472D1F8-7014-FCCE-59CF-0F234510831F">
   </Project>
+  <Project Path="divine\vendor\glfw\GLFW.vcxproj" Id="154B857C-0182-860D-AA6E-6C109684020F">
+  </Project>
   <Project Path="sandbox\sandbox.vcxproj" Id="145A6C82-8039-EB1D-8951-76F4F5AF517F">
   </Project>
 </Solution>

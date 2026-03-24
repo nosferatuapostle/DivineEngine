@@ -1,7 +1,5 @@
 #pragma once
 
-// For use by divine applications
-
 #include "engine/application.h"
 #include "engine/log.h"
 

@@ -2,14 +2,12 @@
 
 #include "event.h"
 
-#include <sstream>
-
 namespace engine
 {
 	class API mouse_moved_event : public event
 	{
 	public:
-		mouse_moved_event(float X, float Y) : x(X), y(Y) {}
+		mouse_moved_event(float x, float y) : x(x), y(y) {}
 
 		inline float get_x() const { return x; }
 		inline float get_y() const { return y; }
@@ -30,7 +28,7 @@ namespace engine
 	class API mouse_scrolled_event : public event
 	{
 	public:
-		mouse_scrolled_event(float X_OFFSET, float Y_OFFSET) : x_offset(X_OFFSET), y_offset(Y_OFFSET) {}
+		mouse_scrolled_event(float x_offset, float y_offset) : x_offset(x_offset), y_offset(y_offset) {}
 
 		inline float get_x_offset() const { return x_offset; }
 		inline float get_y_offset() const { return y_offset; }

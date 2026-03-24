@@ -1,7 +1,5 @@
 #pragma once
 
-#include <memory>
-
 #include "core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
@@ -21,14 +19,14 @@ namespace engine
 	};
 }
 
-#define core_trace(...)    ::engine::log::get_core_logger()->trace(__VA_ARGS__)
-#define core_info(...)     ::engine::log::get_core_logger()->info(__VA_ARGS__)
-#define core_warn(...)     ::engine::log::get_core_logger()->warn(__VA_ARGS__)
-#define core_error(...)    ::engine::log::get_core_logger()->error(__VA_ARGS__)
-#define core_critical(...) ::engine::log::get_core_logger()->critical(__VA_ARGS__)
+#define core_trace    engine::log::get_core_logger()->trace
+#define core_info     engine::log::get_core_logger()->info
+#define core_warn     engine::log::get_core_logger()->warn
+#define core_error    engine::log::get_core_logger()->error
+#define core_critical engine::log::get_core_logger()->critical
 
-#define app_trace(...)     ::engine::log::get_client_logger()->trace(__VA_ARGS__)
-#define app_info(...)      ::engine::log::get_client_logger()->info(__VA_ARGS__)
-#define app_warn(...)      ::engine::log::get_client_logger()->warn(__VA_ARGS__)
-#define app_error(...)     ::engine::log::get_client_logger()->error(__VA_ARGS__)
-#define app_critical(...)  ::engine::log::get_client_logger()->critical(__VA_ARGS__)
+#define app_trace     engine::log::get_client_logger()->trace
+#define app_info      engine::log::get_client_logger()->info
+#define app_warn      engine::log::get_client_logger()->warn
+#define app_error     engine::log::get_client_logger()->error
+#define app_critical  engine::log::get_client_logger()->critical

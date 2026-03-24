@@ -2,14 +2,12 @@
 
 #include "event.h"
 
-#include <sstream>
-
 namespace engine
 {
 	class API window_resize_event : public event
 	{
 	public:
-		window_resize_event(unsigned int WIDTH, unsigned int HEIGHT) : width(WIDTH), height(HEIGHT) {}
+		window_resize_event(unsigned int width, unsigned int height) : width(width), height(height) {}
 
 		inline unsigned int get_width() { return width; }
 		inline unsigned int get_height() { return height; }

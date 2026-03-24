@@ -10,6 +10,11 @@ workspace "divine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["glfw"] = "divine/vendor/glfw/include"
+
+include "divine/vendor/glfw"
+
 project "divine"
 	location "divine"
 	kind "SharedLib"
@@ -17,6 +22,9 @@ project "divine"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "pch.h"
+	pchsource "divine/src/pch.cpp"
 
 	files
 	{
@@ -28,6 +36,13 @@ project "divine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.glfw}"
+	}
+
+	links
+	{
+		"glfw",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

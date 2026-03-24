@@ -1,9 +1,7 @@
 #pragma once
 
+#include "pch.h"
 #include "../core.h"
-
-#include <string>
-#include <functional>
 
 namespace engine
 {
@@ -54,7 +52,7 @@ namespace engine
 		template<typename T>
 		using eventfn = std::function<bool(T&)>;
 	public:
-		event_dispatcher(event& EVENT) : event(EVENT) {}
+		event_dispatcher(event& event) : event(event) {}
 
 		template<typename T>
 		bool dispatcher(eventfn<T> func)

@@ -2,8 +2,6 @@
 
 #include "event.h"
 
-#include <sstream>
-
 namespace engine
 {
 	class API key_event : public event
@@ -13,7 +11,7 @@ namespace engine
 
 		event_class_category(event_category_keyboard, event_category_input);
 	protected:
-		key_event(int KEYCODE) : key_code(KEYCODE) {}
+		key_event(int key_code) : key_code(key_code) {}
 
 		int key_code;
 	};
@@ -21,7 +19,7 @@ namespace engine
 	class API key_pressed_event : public key_event
 	{
 	public:
-		key_pressed_event(int KEYCODE, int REPEAT_COUNT) : key_event(KEYCODE) {}
+		key_pressed_event(int key_code, int repeat_count) : key_event(key_code) {}
 
 		inline int get_reapeat_count() const { return repeat_count; }
 
@@ -44,7 +42,7 @@ namespace engine
 	class API key_released_event : public key_event
 	{
 	public:
-		key_released_event(int KEYCODE) : key_event(KEYCODE) {}
+		key_released_event(int key_code) : key_event(key_code) {}
 
 		std::string to_string() const override
 		{

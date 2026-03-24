@@ -1,4 +1,6 @@
+#include "pch.h"
 #include "application.h"
+
 #include "events/application_event.h"
 #include "log.h"
 
@@ -6,22 +8,16 @@ namespace engine
 {
 	application::application()
 	{
-
+		window = std::unique_ptr<engine::window>(window::create());
 	}
 
-	application::~application()
-	{
-
-	}
+	application::~application() {}
 
 	void application::start()
 	{
-		window_resize_event e(1280, 720);
-		app_trace(e.to_string());
-
-		while (true)
+		while (is_running)
 		{
-			//app_update_event();
-		};
+			window->on_update();
+		}
 	}
 }
